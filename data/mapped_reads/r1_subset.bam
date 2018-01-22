@@ -1,0 +1,1 @@
+[samtools] executing /scif/apps/samtools/bin/samtools view -Sb /scif/data/mapped_reads/r1_subset.sam
