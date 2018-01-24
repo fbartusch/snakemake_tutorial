@@ -1,19 +1,19 @@
 workdir: "/scif/data"
-SAMPLES = ["r1_subset", "r2_subset"]
+SAMPLES = ["A", "B"]
 
 rule bwa_index:
     input:
-        "index/{ref}.fa"
+        "{ref}.fa"
     output:
-        "index/{ref}.fa.bwt"
+        "{ref}.fa.bwt"
     shell:
         "scif run bwa index {input}"
 
 rule bwa_map:
     input:
-        index="index/ref.fa.bwt",
-        ref="index/ref.fa",
-        reads="raw_reads/{sample}.fq"
+        index="genome.fa.bwt",
+        ref="genome.fa",
+        reads="samples/{sample}.fastq"
     output:
         "mapped_reads/{sample}.sam"
     shell:
@@ -49,7 +49,7 @@ rule samtools_index:
 
 rule bcftools_call:
     input:
-        fa="index/ref.fa",
+        fa="genome.fa",
         bam=expand("sorted_reads/{sample}.bam", sample=SAMPLES),
         bai=expand("sorted_reads/{sample}.bam.bai", sample=SAMPLES)
     output:
