@@ -3,3 +3,6 @@
 *.swp
 snakemake
 .snakemake/*
+data/mapped_reads/*
+data/sorted_reads/*
+data/.snakemake
