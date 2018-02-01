@@ -55,6 +55,14 @@
 %apptest samtools
     exec samtools
 
+%appinstall snakemake
+%apphelp snakemake
+    Run snakemake. The workflow is defined by a Snakefile that should be located in the $SCIF_APPDATA folder.
+    This app does not provide snakemake itself, because it is already installed in the Singularity/Docker container.
+    But it would be easy to install snakemake also in the app context.
+%apprun snakemake
+    cd $SCIF_APPDATA
+    exec snakemake "$@"
 
 %appinstall graphviz_create_dag
     apt-get -y install graphviz
