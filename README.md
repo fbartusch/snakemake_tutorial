@@ -192,4 +192,4 @@ args = ["view", "-Sb", "/scif/data/mapped_reads/r1_subset.sam", ">", "/scif/data
 client.run('samtools', args=args)
 ```
 
-This repo is also used as example on the SCIF GitHub repo, so take a [look:](<a href="https://github.com/sci-f/snakemake.scif" target="_blank">snakemake.scif</a>)
+This repo is also used as example on the SCIF GitHub repo, so take a (look:)[<a href="https://github.com/sci-f/snakemake.scif" target="_blank">snakemake.scif</a>]
