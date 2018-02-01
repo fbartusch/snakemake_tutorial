@@ -1,13 +1,13 @@
-# Snakemake tutorial workflow with SCI-F
+# Snakemake tutorial workflow with SCIF
 
-This repository implements the SnakeMake [tutorial workflow](http://snakemake.readthedocs.io/en/latest/tutorial/basics.html#) and uses the Scientific Filesystem (SCI-F) to provide a reproducible research environment. Just clone this repository and you can start to try out things. You can build s Singularity and/or Docker container to run the workflow.
+This repository implements the SnakeMake [tutorial workflow](http://snakemake.readthedocs.io/en/latest/tutorial/basics.html#) and uses the Scientific Filesystem (SCIF) to provide a reproducible research environment. Just clone this repository and you can start to try out things. You can build s Singularity and/or Docker container to run the workflow.
 
 ## Singularity
 
 ### Build container
 
 ```
-sudo singularity build snakemake Singularity
+sudo singularity build snakemake.simg Singularity
 ```
 
 or use the Makefile, if you have `build-essential` installed:
